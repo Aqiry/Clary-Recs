@@ -22,6 +22,7 @@ menu_style = """
         .blank {display:none}
         </style>
         """
+
 st.markdown(menu_style, unsafe_allow_html=True)
 
 conn=sqlite3.connect("users.db")
@@ -102,7 +103,7 @@ df = df.set_index('anime_id')
 df1 = df1.set_index('anime_id')
 
 st.title("Clary Recommends")
-menu=["Home","Sign In","Sign Up", "View All Users","Remove User"]
+menu=["Home","Sign In","Sign Up", "View All Users","Remove User","About"]
 choice=st.sidebar.selectbox("Menu",menu)
 if choice =="Home":
     image = Image.open('Images/TitleImage.jpg')
@@ -230,3 +231,9 @@ elif choice == "Remove User":
                 webbrowser.open(url)
         else :
             st.warning("Incorrect Username/Password")
+elif choice == "About" :
+    st.subheader("Made By")
+    st.success("Shreyansh Gupta")
+    st.info("Wasique Haidry")
+    st.warning("Go To [Source Repository](https://github.com/aqiry/Clary-Recs)")            
+            
