@@ -1,2 +1,2 @@
 # Clary-Recs
-An App to get anime recamendations with user SignIn functionality
+An App to get Anime Recommendations with User Database Functionality
