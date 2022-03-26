@@ -235,5 +235,4 @@ elif choice == "About" :
     st.subheader("Made By")
     st.success("Shreyansh Gupta")
     st.info("Wasique Haidry")
-    st.warning("Go To [Source Repository](https://github.com/aqiry/Clary-Recs)")            
-            
+    # st.warning("Go To [Source Repository](https://github.com/aqiry/Clary-Recs)")
