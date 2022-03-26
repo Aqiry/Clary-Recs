@@ -1,2 +1,2 @@
-# Aqiry-recs
-An App to get anime recamendations with user SignIn functionality
+# Clary-Recs
+An App to get Anime Recommendations with User Database Functionality
