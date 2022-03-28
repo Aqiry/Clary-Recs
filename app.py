@@ -201,8 +201,8 @@ elif choice=="Sign Up":
         else :
             add_user(new_user,new_password)
             st.success("You have created an Otaku Account")
-            if st.button('Go To Home'):
-                webbrowser.open(url)
+            # if st.button('Go To Home'):
+            #     webbrowser.open(url)
 elif choice == "View All Users":
     image = Image.open('Images/view.jpg')
     st.image(image, use_column_width=True)
