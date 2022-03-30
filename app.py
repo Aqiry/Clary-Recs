@@ -158,7 +158,7 @@ elif choice=="Sign In":
                         ran = random.choice(la)
                         st.success(ran + " Selected")
                         st.info("Hunting For Recommendations....")
-                        res = recm(df, ran, 10)
+                        res = recm(df, ran, 15)
                         st.table(res.style.format({"Rating": "{:.2f}"}))
                         st.success("Now Go watch from above animes!!!!")
                     else:
