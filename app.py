@@ -127,7 +127,7 @@ elif choice=="Sign In":
                     option = st.selectbox('Select anime for recommendation', (df['name']))
                     if st.button("Get Recommendation"):
                         st.info("Hunting For Recommendations....")
-                        res = recm(df, option, 15)
+                        res = recm(df, option, 20)
                         st.table(res.style.format({"Rating": "{:.2f}"}))
                         st.success("Now Go watch from above animes!!!!")
                 elif task == "Add Anime to My Collection":
