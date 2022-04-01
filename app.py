@@ -287,7 +287,7 @@ elif choice == "Remove User":
     else:
         st.warning("No Users Found, our app is feeling unloved")
 elif choice == "About" :
-    st.subheader("Made By")
-    st.success("Shreyansh Gupta")
-    st.info("Wasique Haidry")
-    st.warning("Go To [Source Repository](https://github.com/Shrey208/Clary-Recs)")
+    st.subheader("Made By")    
+    st.success("Wasique Haidry")
+    st.info("Shreyansh Gupta")
+    # st.warning("Go To [Source Repository](https://github.com/Shrey208/Clary-Recs)")
