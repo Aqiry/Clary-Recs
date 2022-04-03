@@ -164,7 +164,7 @@ elif choice=="Sign In":
                                     pass                       
                             finally:
                                 st.warning("Finding Animes Like " + option)
-                            res = recm(df, option, 10)
+                            res = recm(df, option, 20)
                             st.table(res.style.format({"Rating": "{:.2f}"}))
                             st.success("Now Go watch from above animes!!!!")
                     elif task == "Add Anime to My Collection":
@@ -181,7 +181,7 @@ elif choice=="Sign In":
                             lw = hist[len(hist)-1][0]
                             st.success(lw + " was your last watched anime")
                             st.info("Finding Animes Like " + lw)
-                            res = recm(df, lw, 10)
+                            res = recm(df, lw, 20)
                             st.table(res.style.format({"Rating": "{:.2f}"}))
                             st.success("Now Go watch from above animes!!!!")
                         else:
@@ -195,7 +195,7 @@ elif choice=="Sign In":
                             ran = random.choice(la)
                             st.success(ran + " Selected")
                             st.info("Finding Animes Like " + ran)
-                            res = recm(df, ran, 10)
+                            res = recm(df, ran, 20)
                             st.table(res.style.format({"Rating": "{:.2f}"}))
                             st.success("Now Go watch from above animes!!!!")
                         else:
