@@ -29,7 +29,6 @@ conn=sqlite3.connect("users.db")
 c=conn.cursor()
 @st.cache(allow_output_mutation=True, show_spinner=False)
 
-
 def create_tables():
     c.execute("CREATE TABLE IF NOT EXISTS usertable(username TEXT, password TEXT);")
     c.execute("CREATE TABLE IF NOT EXISTS userdata(username TEXT, aname TEXT);")
@@ -164,7 +163,7 @@ elif choice=="Sign In":
                                     pass                       
                             finally:
                                 st.warning("Finding Animes Like " + option)
-                            res = recm(df, option, 20)
+                            res = recm(df, option, 10)
                             st.table(res.style.format({"Rating": "{:.2f}"}))
                             st.success("Now Go watch from above animes!!!!")
                     elif task == "Add Anime to My Collection":
@@ -181,7 +180,7 @@ elif choice=="Sign In":
                             lw = hist[len(hist)-1][0]
                             st.success(lw + " was your last watched anime")
                             st.info("Finding Animes Like " + lw)
-                            res = recm(df, lw, 20)
+                            res = recm(df, lw, 10)
                             st.table(res.style.format({"Rating": "{:.2f}"}))
                             st.success("Now Go watch from above animes!!!!")
                         else:
@@ -195,7 +194,7 @@ elif choice=="Sign In":
                             ran = random.choice(la)
                             st.success(ran + " Selected")
                             st.info("Finding Animes Like " + ran)
-                            res = recm(df, ran, 20)
+                            res = recm(df, ran, 10)
                             st.table(res.style.format({"Rating": "{:.2f}"}))
                             st.success("Now Go watch from above animes!!!!")
                         else:
@@ -291,6 +290,8 @@ elif choice == "Remove User":
     else:
         st.warning("No Users Found, our app is feeling unloved")
 elif choice == "About" :
+    st.subheader("About this App")
+    st.success("A nice anime recommendation system to get your recommendations stored with your user profile. Simply SignUp and SignIn to the web-app, then select your favourite anime and click Get Recommendations. If you love the anime a little too much then you may add it to your Otaku collection as well.")
     st.subheader("Made By")
-    st.success("Wasique Haidry")
-    st.info("Shreyansh Gupta")
+    st.info("[Wasique](https://aqiry.github.io/) and [Shreyansh](https://shrey208.github.io/)")
+    st.sidebar.markdown("[![Play Store](https://yourimageshare.com/ib/wAfw7ETFUn.png)](https://play.google.com/store/apps/details?id=com.prhgeyaw.ts_1648361227461)")
